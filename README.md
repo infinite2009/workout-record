@@ -1,4 +1,4 @@
-# body_building
+# workout record
 
 A new Flutter project.
 
