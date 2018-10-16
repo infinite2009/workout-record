@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/body_building.iml" filepath="$PROJECT_DIR$/body_building.iml" />
-      <module fileurl="file://$PROJECT_DIR$/body_building_android.iml" filepath="$PROJECT_DIR$/body_building_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/body_building.iml" filepath="$PROJECT_DIR$/.idea/body_building.iml" />
     </modules>
   </component>
 </project>
