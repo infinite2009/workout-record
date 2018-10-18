@@ -20,31 +20,26 @@ class AreaAndLineChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Record'),
-        ),
-        body: new Container(
-          padding: EdgeInsets.all(40.0),
-          color: Colors.white,
-          child: SingleChildScrollView(
-            child: new Column(
-              children: <Widget>[
-                new charts.LineChart(
-                  seriesList,
-                  animate: animate,
-                  customSeriesRenderers: [
-                    new charts.LineRendererConfig(
-                      // ID used to link series to this renderer.
-                      customRendererId: 'customArea',
-                      includeArea: true,
-                      stacked: true,
-                    ),
-                  ],
-                ),
-              ],
+      appBar: new AppBar(
+        title: new Text('Record'),
+      ),
+      body: new Container(
+        padding: EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 40.0),
+        color: Colors.white,
+        child: new charts.LineChart(
+          seriesList,
+          animate: animate,
+          customSeriesRenderers: [
+            new charts.LineRendererConfig(
+              // ID used to link series to this renderer.
+              customRendererId: 'customArea',
+              includeArea: true,
+              stacked: true,
             ),
-          ),
-        ));
+          ],
+        ),
+      ),
+    );
   }
 
   /// Create one series with sample hard coded data.
