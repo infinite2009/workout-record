@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:body_building/views/root.dart';
+import 'package:body_building/views/add/action/action.dart';
 
 class App extends StatelessWidget {
   // This widget is the root of your application.
@@ -10,6 +11,7 @@ class App extends StatelessWidget {
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => Root(),
+        '/add': (BuildContext context) => AddAction(),
       },
       theme: ThemeData(
         primaryColor: Colors.blue,

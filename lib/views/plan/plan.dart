@@ -12,7 +12,12 @@ class _PlanState extends State<Plan> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text('Hello world'),
+        child: MaterialButton(
+          child: Text('Push'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/add');
+          },
+        ),
       ),
     );
   }
