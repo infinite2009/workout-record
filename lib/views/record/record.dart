@@ -1,6 +1,7 @@
 /// Line chart example
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
+import 'package:body_building/views/plan/bar_chart_demo.dart';
 
 class AreaAndLineChart extends StatelessWidget {
   final List<charts.Series> seriesList;
@@ -22,17 +23,36 @@ class AreaAndLineChart extends StatelessWidget {
     return Container(
       padding: EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 40.0),
       color: Colors.white,
-      child: new charts.LineChart(
-        seriesList,
-        animate: animate,
-        customSeriesRenderers: [
-          new charts.LineRendererConfig(
-            // ID used to link series to this renderer.
-            customRendererId: 'customArea',
-            includeArea: true,
-            stacked: true,
+      child: SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(),
+          child: Column(
+            children: <Widget>[
+              Center(
+                child: Text('折线图'),
+              ),
+              Container(
+                height: 600.0,
+                child: new charts.LineChart(
+                  seriesList,
+                  animate: animate,
+                  customSeriesRenderers: [
+                    new charts.LineRendererConfig(
+                      // ID used to link series to this renderer.
+                      customRendererId: 'customArea',
+                      includeArea: true,
+                      stacked: true,
+                    ),
+                  ],
+                ),
+              ),
+              new Container(
+                height: 400.0,
+                child: SimpleBarChart.withRandomData(),
+              )
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
