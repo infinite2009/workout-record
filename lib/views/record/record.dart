@@ -6,6 +6,7 @@ import 'package:body_building/views/plan/bar_chart_demo.dart';
 class AreaAndLineChart extends StatelessWidget {
   final List<charts.Series> seriesList;
   final bool animate;
+  final items = List<String>.generate(30, (i) => "Item $i");
 
   AreaAndLineChart(this.seriesList, {this.animate});
 
@@ -49,7 +50,16 @@ class AreaAndLineChart extends StatelessWidget {
               new Container(
                 height: 400.0,
                 child: SimpleBarChart.withRandomData(),
-              )
+              ),
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text('${items[index]}'),
+                  );
+                },
+              ),
             ],
           ),
         ),

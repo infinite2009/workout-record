@@ -9,7 +9,7 @@ class SettingState extends State<Setting> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(slivers: <Widget>[
-      const SliverAppBar(
+      SliverAppBar(
         pinned: true,
         expandedHeight: 50.0,
         flexibleSpace: FlexibleSpaceBar(

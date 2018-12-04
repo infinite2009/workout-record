@@ -12,5 +12,9 @@ const TabNavIcons = [
   {
     'title': '设置',
     'icon': Icons.settings,
+  },
+  {
+    'title': '测试',
+    'icon': Icons.settings,
   }
 ];

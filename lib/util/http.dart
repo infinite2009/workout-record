@@ -1,0 +1,3 @@
+class Http {
+    Http() {}
+}

@@ -3,6 +3,7 @@ import 'package:body_building/config/tab_nav_icons.dart';
 import 'package:body_building/views/record/record.dart';
 import 'package:body_building/views/setting/setting.dart';
 import 'package:body_building/views/plan/plan.dart';
+import 'package:body_building/views/test/test.dart';
 
 class Root extends StatefulWidget {
   Root({Key key}) : super(key: key);
@@ -27,12 +28,14 @@ class RootState extends State<Root> {
       0: Plan(),
       1: AreaAndLineChart.withSampleData(),
       2: Setting(),
+      3: Test(),
     };
     return map[currentTabIndex];
   }
 
   _generateBottomNavigationBar() {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
       currentIndex: currentTabIndex,
       items: TabNavIcons.map(
         (e) {
