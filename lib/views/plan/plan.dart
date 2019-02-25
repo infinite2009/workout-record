@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:body_building/views/plan/pie_chart_demo.dart';
+import 'package:work_out/views/plan/pie_chart_demo.dart';
 
 class Plan extends StatefulWidget {
   Plan();

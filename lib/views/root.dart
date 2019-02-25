@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:body_building/config/tab_nav_icons.dart';
-import 'package:body_building/views/record/record.dart';
-import 'package:body_building/views/setting/setting.dart';
-import 'package:body_building/views/plan/plan.dart';
-import 'package:body_building/views/test/test.dart';
+import 'package:work_out/config/tab_nav_icons.dart';
+import 'package:work_out/views/record/record.dart';
+import 'package:work_out/views/setting/setting.dart';
+import 'package:work_out/views/plan/plan.dart';
+import 'package:work_out/views/test/test.dart';
 
 class Root extends StatefulWidget {
   Root({Key key}) : super(key: key);

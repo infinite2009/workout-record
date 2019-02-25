@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AddAction extends StatefulWidget {
+  final String text;
+  AddAction({String text}) : text = text;
+
   @override
   createState() => AddActionState();
 }
@@ -17,7 +20,7 @@ class AddActionState extends State<AddAction> {
       body: Container(
         child: MaterialButton(
           child: Text('Back'),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () => Navigator.pop(context, widget.text),
         ),
       ),
     );

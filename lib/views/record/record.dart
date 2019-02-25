@@ -1,7 +1,7 @@
 /// Line chart example
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
-import 'package:body_building/views/plan/bar_chart_demo.dart';
+import 'package:work_out/views/plan/bar_chart_demo.dart';
 
 class AreaAndLineChart extends StatelessWidget {
   final List<charts.Series> seriesList;

@@ -1,6 +1,6 @@
-import 'package:body_building/views/plan/plan.dart';
-import 'package:body_building/views/record/record.dart';
-import 'package:body_building/views/setting/setting.dart';
+import 'package:work_out/views/plan/plan.dart';
+import 'package:work_out/views/record/record.dart';
+import 'package:work_out/views/setting/setting.dart';
 
 final routes = [
   {
