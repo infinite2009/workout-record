@@ -9,17 +9,18 @@ class App extends StatelessWidget {
     return new MaterialApp(
       title: '训练记录',
       initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/': (BuildContext context) => Root()
-      },
       onGenerateRoute: (RouteSettings settings) {
-        print('onGenerateRoute called');
-        if (settings.name == '/add') {
-          print(settings.arguments);
-          return MaterialPageRoute<void>(
-            settings: settings,
-            builder: (BuildContext context) => AddAction(text: settings.arguments)
-          );
+        switch (settings.name) {
+          case '/add':
+            return MaterialPageRoute<void>(
+              settings: settings,
+              builder: (BuildContext context) => AddAction(text: settings.arguments)
+            );
+          default:
+            return MaterialPageRoute<void>(
+              settings: settings,
+              builder: (BuildContext context) => Root()
+            );
         }
       },
       theme: ThemeData(
